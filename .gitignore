@@ -1,0 +1,27 @@
+# Compiled files
+__pycache__/
+*.py[cod]
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Flask-specific
+instance/
+.webassets-cache
+
+# Test + coverage
+.pytest_cache/
+.coverage
+.cache
+
+# Logs & databases
+*.log
+*.sqlite3
+
+# IDE/tools
+.DS_Store
+.vscode/
+.idea/
