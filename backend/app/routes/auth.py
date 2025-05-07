@@ -15,6 +15,7 @@ def verify_email(email: str) -> bool:
 
 @auth_bp.route("/register", methods=['POST'])
 def register():
+    # Get the Supabase client
     supabase = current_app.supabase
     
     # Get the data from the request
@@ -32,8 +33,8 @@ def register():
     
     
     # Check if the email already exists
-    existing_user = supabase.table("users").select("*").eq("email", email).execute()
-    if existing_user.data:
+    response = supabase.table("users").select("*").eq("email", email).execute()
+    if response.data:
         return jsonify({"error": "That email is not available."}), 400
     
     # Hash the password
@@ -54,3 +55,32 @@ def register():
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@auth_bp.route("/login", methods=['POST'])
+def login():
+    # Get the Supabase client
+    supabase = current_app.supabase
+    
+    # Get the data from the request
+    email = request.json.get('email')
+    password = request.json.get('password')
+    
+    # Input validation
+    if not email or not password:
+        return jsonify({"error": "Email and password are required."}), 400
+    if not verify_email(email):
+        return jsonify({"error": "Invalid email format."}), 400
+    
+    # Check if the user exists
+    response = supabase.table("users").select("*").eq("email", email).execute()
+    
+    if not response.data:
+        return jsonify({"error": "Invalid email or password."}), 401
+    
+    # Verify the password
+    hashed_password = response.data[0]['password_hash']
+    
+    if not bcrypt.checkpw(password.encode('utf-8'), hashed_password.encode('utf-8')):
+        return jsonify({"error": "Invalid email or password."}), 401
+    
+    return jsonify({"message": "Login successful!"}), 200
