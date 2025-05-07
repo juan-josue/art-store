@@ -1,5 +1,5 @@
 from flask import Blueprint, current_app, request, jsonify
-from flask_jwt_extended import jwt_required
+from flask_jwt_extended import get_jwt_identity, jwt_required
 
 users_bp = Blueprint("users", __name__, url_prefix="/users")
 
@@ -22,6 +22,8 @@ def handle_user(id):
         return jsonify(user), 200
     
     elif request.method == 'DELETE':
+        if str(id) != get_jwt_identity():
+            return jsonify({"error": "You can only delete your own account."}), 403
         try:
             supabase.table("users").delete().eq("id", id).execute()
             return jsonify({"message": "User deleted successfully."}), 200
