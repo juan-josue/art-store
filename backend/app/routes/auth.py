@@ -2,6 +2,7 @@ import re
 import bcrypt
 
 from flask import Blueprint, current_app, request, jsonify
+from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
 
 auth_bp = Blueprint("auth", __name__, url_prefix="/auth")
 
@@ -73,14 +74,33 @@ def login():
     
     # Check if the user exists
     response = supabase.table("users").select("*").eq("email", email).execute()
-    
-    if not response.data:
+    user = response.data[0] if response.data else None
+    if not user:
         return jsonify({"error": "Invalid email or password."}), 401
     
     # Verify the password
-    hashed_password = response.data[0]['password_hash']
-    
+    hashed_password = user['password_hash']
     if not bcrypt.checkpw(password.encode('utf-8'), hashed_password.encode('utf-8')):
         return jsonify({"error": "Invalid email or password."}), 401
     
-    return jsonify({"message": "Login successful!"}), 200
+    # Create JWT token
+    access_token = create_access_token(identity=str(user['id']))
+    return jsonify(access_token=access_token), 200
+
+@auth_bp.route("/me", methods=['GET'])
+@jwt_required()
+def me():
+    # Get the Supabase client
+    supabase = current_app.supabase
+    
+    # Get the current user's ID
+    user_id = get_jwt_identity()
+    
+    # Get the user from the database
+    response = supabase.table("users").select("*").eq("id", user_id).execute()
+    user = response.data[0] if response.data else None
+    
+    if not user:
+        return jsonify({"error": "User not found."}), 404
+    
+    return jsonify(user), 200

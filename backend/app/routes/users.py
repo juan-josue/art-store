@@ -1,4 +1,5 @@
 from flask import Blueprint, current_app, request, jsonify
+from flask_jwt_extended import jwt_required
 
 users_bp = Blueprint("users", __name__, url_prefix="/users")
 
@@ -7,6 +8,7 @@ def get_user_with_id(supabase, user_id):
     return response.data[0] if response.data else None
  
 @users_bp.route("/<int:id>", methods=['GET', 'DELETE'])
+@jwt_required()
 def handle_user(id):
     # Get the Supabase client
     supabase = current_app.supabase
