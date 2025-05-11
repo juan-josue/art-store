@@ -7,7 +7,7 @@ def get_user_with_id(supabase, user_id):
     response = supabase.table("users").select("*").eq("id", user_id).execute()
     return response.data[0] if response.data else None
  
-@users_bp.route("/<int:id>", methods=['GET', 'DELETE'])
+@users_bp.route("/<int:id>", methods=['GET'])
 @jwt_required()
 def handle_user(id):
     # Get the Supabase client
@@ -18,15 +18,25 @@ def handle_user(id):
     if not user:
         return jsonify({"error": f"User with id={id} not found."}), 404
     
-    if request.method == 'GET':    
-        return jsonify(user), 200
+    return jsonify(user), 200
+        
+        
+@users_bp.route("/<int:id>", methods=['DELETE'])
+@jwt_required()
+def delete_user(id):
+    # Get the Supabase client
+    supabase = current_app.supabase
     
-    elif request.method == 'DELETE':
-        if str(id) != get_jwt_identity():
+    # Check if the user exists
+    user = get_user_with_id(supabase, id)
+    if not user:
+        return jsonify({"error": f"User with id={id} not found."}), 404
+
+    if str(id) != get_jwt_identity():
             return jsonify({"error": "You can only delete your own account."}), 403
-        try:
-            supabase.table("users").delete().eq("id", id).execute()
-            return jsonify({"message": "User deleted successfully."}), 200
-        except Exception as e:
-            return jsonify({"error": str(e)}), 500
-    
+        
+    try:
+        supabase.table("users").delete().eq("id", id).execute()
+        return jsonify({"message": "User deleted successfully."}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
