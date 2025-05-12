@@ -1,4 +1,4 @@
-from flask import Blueprint, current_app, request, jsonify
+from flask import Blueprint, current_app, jsonify
 from flask_jwt_extended import get_jwt_identity, jwt_required
 
 users_bp = Blueprint("users", __name__, url_prefix="/users")
