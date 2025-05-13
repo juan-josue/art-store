@@ -38,7 +38,7 @@ export default function About() {
 
         <div className="font-title text-white text-4xl mt-5 text-center uppercase">
           The future of art <br />
-          is frictionless. <br />
+          is <span className="text-amber-300">frictionless</span>. <br />
           Welcome to your <br />
           new gallery.
         </div>
@@ -47,7 +47,7 @@ export default function About() {
       <div id="clip" className="flex flex-col items-center justify-center h-dvh w-screen">
         <div className="relative mask-clip-path w-[300px] h-[500px]">
           <img
-            src="/img/artwork-1.jpg"
+            src="/img/artwork-2.jpg"
             alt="Artwork"
             className="absolute inset-0 size-full rounded-2xl object-cover"
           />     

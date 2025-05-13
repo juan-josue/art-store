@@ -49,7 +49,7 @@ export default function Hero() {
 
         <div className="absolute top-5 left-5 z-10 flex flex-col gap-4 text-white">
           <h1 className="text-[130px] font-title font-extrabold text-white">
-            DISCOVER//
+            ART//
           </h1>
           <p className="text-md font-body text-white">
             Curated digital artwork from emerging creators. <br />
@@ -59,11 +59,11 @@ export default function Hero() {
         </div>
 
         <h1 className="absolute bottom-5 right-5 z-10 text-[130px] font-title font-extrabold text-white">
-          //DIGITAL
+          //STREAM
         </h1>
       </div>
       <h1 className="absolute bottom-5 right-5 z-5 text-[130px] font-title font-extrabold text-amber-300">
-        //DIGITAL
+        //STREAM
       </h1>
     </div>
   );
