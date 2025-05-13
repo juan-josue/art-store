@@ -17,7 +17,7 @@ export default function Hero() {
 
     gsap.to("#video-frame", {
       clipPath: "polygon(14% 40%, 80% 0%, 90% 70%, 40% 90%)",
-      borderRadius: "0 0 40% 40%",
+      borderRadius: "40%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: "#video-frame",
@@ -28,7 +28,7 @@ export default function Hero() {
   });
 
   return (
-    <div className="relative min-h-screen w-screen overflow-x-hidden">
+    <div className="relative min-h-screen w-screen overflow-x-hidden bg-zinc-900">
       <div
         id="video-frame"
         className="relative z-7 h-dvh w-screen overflow-x-hidden"
@@ -45,23 +45,25 @@ export default function Hero() {
           Your browser does not support the video tag.
         </video>
 
+        <div className="absolute inset-0 bg-black/50 z-0" />
+
         <div className="absolute top-5 left-5 z-10 flex flex-col gap-4 text-white">
-          <h1 className="text-6xl font-title font-extrabold text-white">
-            DISCOVER
+          <h1 className="text-[130px] font-title font-extrabold text-white">
+            DISCOVER//
           </h1>
           <p className="text-md font-body text-white">
             Curated digital artwork from emerging creators. <br />
             Upload, sell, and collect with secure instant delivery.
           </p>
-          <Button className="bg-blue-500 w-40">Browse Art</Button>
+          <Button className="bg-amber-300 text-foreground w-40">Browse Art</Button>
         </div>
 
-        <h1 className="absolute bottom-5 right-5 z-10 text-6xl font-title font-extrabold text-white">
-          DIGITAL
+        <h1 className="absolute bottom-5 right-5 z-10 text-[130px] font-title font-extrabold text-white">
+          //DIGITAL
         </h1>
       </div>
-      <h1 className="absolute bottom-5 right-5 z-5 text-6xl font-title font-extrabold text-blue-500">
-        DIGITAL
+      <h1 className="absolute bottom-5 right-5 z-5 text-[130px] font-title font-extrabold text-amber-300">
+        //DIGITAL
       </h1>
     </div>
   );
