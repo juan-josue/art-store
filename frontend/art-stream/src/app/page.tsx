@@ -45,11 +45,11 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
 
-          <h1 className="absolute bottom-5 right-5 z-10 text-[100px] font-bold text-white">
+          <h1 className="absolute bottom-5 right-5 z-10 text-[100px] font-title text-white">
             ARTSTREAM
           </h1>
         </div>
-        <h1 className="absolute bottom-5 right-5 z-5 text-[100px] font-bold text-blue-500">
+        <h1 className="absolute bottom-5 right-5 z-5 text-[100px] font-title text-blue-500">
           ARTSTREAM
         </h1>
       </div>
