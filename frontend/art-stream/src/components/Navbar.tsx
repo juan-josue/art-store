@@ -42,7 +42,7 @@ export default function Navbar() {
               alt="logo"
               className="w-10 h-10 rounded-full"
             />
-            <Button id="product-btn" className="bg-amber-300 text-foreground">
+            <Button id="product-btn" className="bg-white text-foreground hover:bg-amber-300 transition-colors duration-200 cursor-pointer">
               Products
             </Button>
           </div>
@@ -52,14 +52,11 @@ export default function Navbar() {
               <a
                 key={index}
                 href={`#${item.toLowerCase()}`}
-                className="text-white font-body font-bold uppercase"
+                className="text-white font-body font-bold uppercase hover:text-amber-300 transition-colors duration-200 cursor-pointer"
               >
                 {item}
               </a>
             ))}
-            <Button className="bg-amber-300 text-foreground w-40">
-              Browse Art
-            </Button>
           </div>
         </nav>
       </header>

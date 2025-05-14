@@ -55,7 +55,9 @@ export default function Hero() {
             Curated digital artwork from emerging creators. <br />
             Upload, sell, and collect with secure instant delivery.
           </p>
-          <Button className="bg-amber-300 text-foreground w-40">Browse Art</Button>
+          <Button className="bg-amber-300 hover:bg-amber-400 text-foreground w-40 cursor-pointer">
+            Browse Art
+          </Button>
         </div>
 
         <h1 className="absolute bottom-4 right-4 z-10 text-[130px] font-title font-extrabold text-white">
