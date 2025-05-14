@@ -29,7 +29,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="relative min-h-screen w-screen overflow-x-hidden bg-zinc-900"
+      className="relative min-h-screen w-screen overflow-x-hidden"
     >
       <div className="relative mt-36 flex flex-col items-center gap-4">
         <h2 className="font-body text-white text-md uppercase">
