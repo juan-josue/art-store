@@ -47,7 +47,7 @@ export default function Hero() {
 
         {/* <div className="absolute inset-0 bg-black/20 z-0" /> */}
 
-        <div className="absolute top-5 left-5 z-10 flex flex-col gap-4 text-white">
+        <div className="absolute top-10 left-4 z-10 flex flex-col gap-4 text-white">
           <h1 className="text-[130px] font-title font-extrabold text-white">
             ART//
           </h1>
@@ -58,11 +58,11 @@ export default function Hero() {
           <Button className="bg-amber-300 text-foreground w-40">Browse Art</Button>
         </div>
 
-        <h1 className="absolute bottom-5 right-5 z-10 text-[130px] font-title font-extrabold text-white">
+        <h1 className="absolute bottom-4 right-4 z-10 text-[130px] font-title font-extrabold text-white">
           //STREAM
         </h1>
       </div>
-      <h1 className="absolute bottom-5 right-5 z-5 text-[130px] font-title font-extrabold text-amber-300">
+      <h1 className="absolute bottom-4 right-4 z-5 text-[130px] font-title font-extrabold text-amber-300">
         //STREAM
       </h1>
     </div>
