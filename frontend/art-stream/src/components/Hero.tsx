@@ -45,8 +45,6 @@ export default function Hero() {
           Your browser does not support the video tag.
         </video>
 
-        {/* <div className="absolute inset-0 bg-black/20 z-0" /> */}
-
         <div className="absolute top-10 left-4 z-10 flex flex-col gap-4 text-white">
           <h1 className="text-[130px] font-title font-extrabold text-white">
             ART//
