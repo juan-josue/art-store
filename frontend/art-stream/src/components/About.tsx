@@ -27,7 +27,7 @@ export default function About() {
   });
 
   return (
-    <div
+    <section
       id="about"
       className="relative min-h-screen w-screen overflow-x-hidden"
     >
@@ -53,6 +53,6 @@ export default function About() {
           />     
         </div>
       </div>
-    </div>
+    </section>
   );
 }

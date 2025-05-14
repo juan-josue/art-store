@@ -28,7 +28,7 @@ export default function Hero() {
   });
 
   return (
-    <div className="relative min-h-screen w-screen overflow-x-hidden">
+    <section className="relative min-h-screen w-screen overflow-x-hidden">
       <div
         id="video-frame"
         className="relative z-7 h-dvh w-screen overflow-x-hidden"
@@ -65,6 +65,6 @@ export default function Hero() {
       <h1 className="absolute bottom-4 right-4 z-5 text-[130px] font-title font-extrabold text-amber-300">
         //STREAM
       </h1>
-    </div>
+    </section>
   );
 }
