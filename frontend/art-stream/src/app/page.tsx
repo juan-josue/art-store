@@ -3,6 +3,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Navbar from "@/components/Navbar";
+import Market from "@/components/Market";
 
 export default function Home() {
 
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Market />
     </main>
   );
 }
