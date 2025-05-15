@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const navbarItems = ["Gallery", "Marketplace", "About", "Contact"];
+const navbarItems = ["Home", "About", "Market" , "Contact"];
 
 export default function Navbar() {
   const navContainerRef = useRef<HTMLDivElement>(null);

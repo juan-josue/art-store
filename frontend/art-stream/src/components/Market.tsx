@@ -91,7 +91,7 @@ const CardTilt = ({ children, className }: CardTiltProps) => {
 
 export default function Market() {
   return (
-    <section className="py-64">
+    <section id="market" className="py-64">
       <div className="px-8 md:px-32 mx-auto">
         <CardTilt className="h-96 w-full rounded-md overflow-hidden">
           <Card

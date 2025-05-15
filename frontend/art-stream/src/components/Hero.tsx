@@ -28,7 +28,7 @@ export default function Hero() {
   });
 
   return (
-    <section className="relative min-h-screen w-screen overflow-x-hidden">
+    <section id="home" className="relative min-h-screen w-screen overflow-x-hidden">
       <div
         id="video-frame"
         className="relative z-7 h-dvh w-screen overflow-x-hidden"
