@@ -46,7 +46,7 @@ export default function Hero() {
         </video>
 
         <div className="absolute top-10 left-4 z-10 flex flex-col gap-4 text-white">
-          <h1 className="text-[130px] font-title font-extrabold text-white">
+          <h1 className="text-[130px] font-glitch text-white">
             ART//
           </h1>
           <p className="text-md font-body text-white">
@@ -58,11 +58,11 @@ export default function Hero() {
           </Button>
         </div>
 
-        <h1 className="absolute bottom-4 right-4 z-10 text-[130px] font-title font-extrabold text-white">
+        <h1 className="absolute bottom-4 right-4 z-10 text-[130px] font-glitch text-white">
           //STREAM
         </h1>
       </div>
-      <h1 className="absolute bottom-4 right-4 z-5 text-[130px] font-title font-extrabold text-amber-300">
+      <h1 className="absolute bottom-4 right-4 z-5 text-[130px] font-glitch text-amber-300">
         //STREAM
       </h1>
     </section>
