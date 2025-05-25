@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Orbitron, Rubik_Glitch  } from "next/font/google";
+import { Inter, Shrikhand, Poppins } from "next/font/google";
 import "./globals.css";
-
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  variable: '--font-orbitron',
-});
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
 });
 
-const glitch = Rubik_Glitch({
+const shrikhand = Shrikhand({
   subsets: ['latin'],
-  variable: '--font-glitch',
+  variable: '--font-shrikhand',
+  weight: '400',
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
   weight: '400',
 });
 
@@ -31,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${orbitron.variable} ${glitch.variable} antialiased`}
+        className={`${inter.variable} ${shrikhand.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>

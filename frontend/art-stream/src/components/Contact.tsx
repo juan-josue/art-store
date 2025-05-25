@@ -36,7 +36,7 @@ export default function Contact() {
         ref={headingContainerRef}
         className="flex flex-col items-center justify-center h-full"
       >
-        <h1 className="text-[180px] text-nowrap font-glitch text-center pt-32 text-zinc-900">
+        <h1 className="text-[180px] text-nowrap font-shrikhand text-center pt-32 text-zinc-900">
           ART STREAM
         </h1>
       </div>

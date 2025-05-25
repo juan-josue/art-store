@@ -28,11 +28,15 @@ export default function Hero() {
   });
 
   return (
-    <section id="home" className="relative min-h-screen w-screen overflow-x-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen w-screen overflow-x-hidden"
+    >
       <div
         id="video-frame"
         className="relative z-7 h-dvh w-screen overflow-x-hidden"
       >
+        {/* Background video */}
         <video
           autoPlay
           loop
@@ -45,25 +49,29 @@ export default function Hero() {
           Your browser does not support the video tag.
         </video>
 
+        {/* ART + description + call to action btn  */}
         <div className="absolute top-10 left-4 z-10 flex flex-col gap-4 text-white">
-          <h1 className="text-[130px] font-glitch text-white">
-            ART//
+          <h1 className="text-[250px] font-shrikhand font-extrabold text-amber-300">
+            ART
           </h1>
           <p className="text-md font-body text-white">
             Curated digital artwork from emerging creators. <br />
             Upload, sell, and collect with secure instant delivery.
           </p>
-          <Button className="bg-amber-300 hover:bg-amber-400 text-foreground w-40 cursor-pointer">
+          <Button className="bg-amber-300 rounded-4xl p-8 text-foreground w-40 cursor-pointer">
             Browse Art
           </Button>
         </div>
 
-        <h1 className="absolute bottom-4 right-4 z-10 text-[130px] font-glitch text-white">
-          //STREAM
+        {/* STREAM foreground */}
+        <h1 className="absolute bottom-4 right-4 z-10 text-[250px] font-shrikhand font-extrabold text-amber-300">
+          STREAM
         </h1>
       </div>
-      <h1 className="absolute bottom-4 right-4 z-5 text-[130px] font-glitch text-amber-300">
-        //STREAM
+
+      {/* STREAM background */}
+      <h1 className="absolute bottom-4 right-4 z-5 text-[250px] font-shrikhand font-extrabold text-white">
+        STREAM
       </h1>
     </section>
   );

@@ -32,11 +32,11 @@ export default function About() {
       className="relative min-h-screen w-screen overflow-x-hidden"
     >
       <div className="relative mt-36 flex flex-col items-center gap-4">
-        <h2 className="font-body text-white text-md uppercase">
+        <h2 className="font-body text-zinc-900 text-md uppercase">
           Welcome to ARTSTREAM
         </h2>
 
-        <div className="font-title text-white text-4xl mt-5 text-center uppercase">
+        <div className="font-title text-zinc-900 text-6xl mt-5 text-center uppercase">
           The future of art <br />
           is <span className="text-amber-300">frictionless</span>. <br />
           Welcome to your <br />

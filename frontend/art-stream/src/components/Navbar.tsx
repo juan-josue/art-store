@@ -23,7 +23,7 @@ export default function Navbar() {
         end: "+=400",
         scrub: true,
       },
-      backgroundColor: '#27272a',
+      backgroundColor: '#18181b',
       scale: 0.95,
       ease: "power1.out",
     });
@@ -43,7 +43,7 @@ export default function Navbar() {
               className="w-10 h-10 rounded-full"
             />
             <Button id="product-btn" className="bg-white text-foreground hover:bg-amber-300 transition-colors duration-200 cursor-pointer">
-              Products
+              Join Now
             </Button>
           </div>
 

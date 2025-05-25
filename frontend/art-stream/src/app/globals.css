@@ -16,8 +16,8 @@ html {
   --color-foreground: var(--foreground);
 
   --font-body: var(--font-inter);
-  --font-title: var(--font-orbitron);
-  --font-glitch: var(--font-glitch);
+  --font-title: var(--font-poppins);
+  --font-shrikhand: var(--font-shrikhand);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
