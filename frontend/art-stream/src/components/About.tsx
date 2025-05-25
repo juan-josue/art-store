@@ -22,7 +22,7 @@ export default function About() {
     clipAnimation.to(".mask-clip-path", {
       width: "100vw",
       height: "100vh",
-      borderRadius: 0,
+      borderRadius: "0 0 0 0",
     });
   });
 
@@ -38,7 +38,7 @@ export default function About() {
 
         <div className="font-title text-zinc-900 text-6xl mt-5 text-center uppercase">
           The future of art <br />
-          is <span className="text-amber-300">frictionless</span>. <br />
+          is <span className="text-amber-200 font-shrikhand">frictionless</span>. <br />
           Welcome to your <br />
           new gallery.
         </div>
@@ -47,9 +47,9 @@ export default function About() {
       <div id="clip" className="flex flex-col items-center justify-center h-dvh w-screen">
         <div className="relative mask-clip-path w-[300px] h-[500px]">
           <img
-            src="/img/artwork-2.jpg"
+            src="/img/artwork-4.jpg"
             alt="Artwork"
-            className="absolute inset-0 size-full rounded-2xl object-cover"
+            className="absolute inset-0 size-full object-cover"
           />     
         </div>
       </div>

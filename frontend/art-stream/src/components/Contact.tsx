@@ -30,13 +30,13 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative min-h-screen w-screen overflow-x-hidden bg-amber-300 px-16"
+      className="relative min-h-screen w-screen overflow-x-hidden bg-amber-200 px-16"
     >
       <div
         ref={headingContainerRef}
         className="flex flex-col items-center justify-center h-full"
       >
-        <h1 className="text-[180px] text-nowrap font-shrikhand text-center pt-32 text-zinc-900">
+        <h1 className="text-[180px] text-nowrap font-shrikhand text-center pt-32 text-pink-300">
           ART STREAM
         </h1>
       </div>

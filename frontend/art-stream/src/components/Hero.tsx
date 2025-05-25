@@ -51,20 +51,20 @@ export default function Hero() {
 
         {/* ART + description + call to action btn  */}
         <div className="absolute top-10 left-4 z-10 flex flex-col gap-4 text-white">
-          <h1 className="text-[250px] font-shrikhand font-extrabold text-amber-300">
+          <h1 className="text-[250px] font-shrikhand font-extrabold text-amber-200">
             ART
           </h1>
           <p className="text-md font-body text-white">
             Curated digital artwork from emerging creators. <br />
             Upload, sell, and collect with secure instant delivery.
           </p>
-          <Button className="bg-amber-300 rounded-4xl p-8 text-foreground w-40 cursor-pointer">
+          <Button className="bg-amber-200 rounded-4xl p-8 text-foreground w-40 cursor-pointer">
             Browse Art
           </Button>
         </div>
 
         {/* STREAM foreground */}
-        <h1 className="absolute bottom-4 right-4 z-10 text-[250px] font-shrikhand font-extrabold text-amber-300">
+        <h1 className="absolute bottom-4 right-4 z-10 text-[250px] font-shrikhand font-extrabold text-amber-200">
           STREAM
         </h1>
       </div>

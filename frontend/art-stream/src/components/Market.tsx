@@ -9,25 +9,14 @@ type CardProps = {
 };
 
 const Card = ({ src, title, description }: CardProps) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   return (
     <div
-      className="relative size-full border-gray-500 border-1 rounded-md overflow-hidden"
-      onMouseEnter={() => videoRef.current?.play()}
-      onMouseLeave={() => {
-        videoRef.current?.pause();
-        if (videoRef.current) {
-          videoRef.current.currentTime = 0;
-        }
-      }}
+      className="relative size-full rounded-md overflow-hidden"
     >
-      <video
-        ref={videoRef}
-        loop
-        muted
+      <img
         className="absolute left-0 top-0 size-full object-cover object-center"
         src={src}
+        alt={title}
       />
       <div className="absolute inset-0 bg-yellow-300/70 z-0 mix-blend-multiply pointer-events-none" />
 
@@ -91,11 +80,11 @@ const CardTilt = ({ children, className }: CardTiltProps) => {
 
 export default function Market() {
   return (
-    <section id="market" className="py-64">
+    <section id="market" className="py-64 bg-teal-700">
       <div className="px-8 md:px-32 mx-auto">
         <CardTilt className="h-96 w-full rounded-md overflow-hidden">
           <Card
-            src={"/videos/bg-video-2.mp4"}
+            src={"/img/artwork-4.jpg"}
             title="Collect What Moves You"
             description="Explore a curated marketplace of original digital art. Buy directly from artists and build your unique collection."
           />
@@ -104,7 +93,7 @@ export default function Market() {
         <div className="grid h-[110vh] mt-8 grid-cols-1 md:grid-cols-2 grid-rows-3 gap-8">
           <CardTilt className="row-span-1 md:col-span-1 md:row-span-2 rounded-md overflow-hidden">
             <Card
-              src={"/videos/bg-video-3.mp4"}
+              src={"/img/artwork-5.jpg"}
               title="Start Your Art Business"
               description="Upload your work, set your prices, and run your own storefront with instant digital delivery."
             />
@@ -112,14 +101,14 @@ export default function Market() {
           <div className="row-span-2 md:col-span-1 grid grid-rows-2 gap-8">
             <CardTilt className="row-span-1 md:col-span-1 rounded-md overflow-hidden">
               <Card
-                src={"/videos/bg-video.mp4"}
+                src={"/img/artwork-3.jpg"}
                 title="Streamlined & Sold"
                 description="Instant downloads. No shipping drama. Sell to anyone, anywhere."
               />
             </CardTilt>
             <CardTilt className="row-span-1 md:col-span-1 rounded-md overflow-hidden">
               <Card
-                src={"/videos/bg-video-4.mp4"}
+                src={"/img/artwork-4.jpg"}
                 title="Built For Artists"
                 description="Your art. Your name. Your store. Stay independent and keep your vision intact."
               />
