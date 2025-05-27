@@ -50,8 +50,8 @@ export default function Hero() {
         </video>
 
         {/* ART + description + call to action btn  */}
-        <div className="absolute top-32 left-32 z-10 flex flex-col text-white">
-          <h1 className="text-[250px] leading-none font-shrikhand font-extrabold text-amber-200">
+        <div className="absolute top-32 left-4 lg:left-32 z-10 flex flex-col text-white">
+          <h1 className="text-[4rem] lg:text-[16rem] leading-none font-shrikhand font-extrabold text-amber-200">
             ART
           </h1>
           <p className="text-lg font-body text-white">
@@ -64,13 +64,13 @@ export default function Hero() {
         </div>
 
         {/* STREAM foreground */}
-        <h1 className="absolute bottom-4 right-32 z-10 text-[250px] font-shrikhand font-extrabold text-amber-200">
+        <h1 className="absolute bottom-4 right-4 lg:right-32 z-10 text-[4rem] lg:text-[16rem] font-shrikhand font-extrabold text-amber-200">
           STREAM
         </h1>
       </div>
 
       {/* STREAM background */}
-      <h1 className="absolute bottom-4 right-32 z-5 text-[250px] font-shrikhand font-extrabold text-white">
+      <h1 className="absolute bottom-4 right-4 lg:right-32 z-5 text-[4rem] lg:text-[16rem] font-shrikhand font-extrabold text-white">
         STREAM
       </h1>
     </section>
