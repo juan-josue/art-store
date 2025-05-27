@@ -18,7 +18,6 @@ const Card = ({ src, title, description }: CardProps) => {
         src={src}
         alt={title}
       />
-      <div className="absolute inset-0 bg-yellow-300/70 z-0 mix-blend-multiply pointer-events-none" />
 
       <div className="relative z-10 flex size-full flex-col justify-between p-4">
         <div>
