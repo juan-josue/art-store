@@ -36,7 +36,7 @@ export default function About() {
           Welcome to ARTSTREAM
         </h2>
 
-        <div className="font-title text-zinc-900 text-6xl mt-5 text-center uppercase">
+        <div className="font-title text-zinc-900 text-3xl lg:text-6xl mt-5 text-center uppercase">
           The future of art <br />
           is <span className="text-amber-200 font-shrikhand">frictionless</span>. <br />
           Welcome to your <br />
@@ -45,7 +45,7 @@ export default function About() {
       </div>
 
       <div id="clip" className="flex flex-col items-center justify-center h-dvh w-screen">
-        <div className="relative mask-clip-path w-[300px] h-[500px]">
+        <div className="relative mask-clip-path w-[200px] lg:w-[300px] aspect-3/5">
           <img
             src="/img/artwork-4.jpg"
             alt="Artwork"

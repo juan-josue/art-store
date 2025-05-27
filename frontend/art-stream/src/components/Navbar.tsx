@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const navbarItems = ["Home", "About", "Market" , "Contact"];
+const navbarItems = ["Home", "About", "Market", "Contact"];
 
 export default function Navbar() {
   const navContainerRef = useRef<HTMLDivElement>(null);
@@ -24,7 +24,7 @@ export default function Navbar() {
         end: "+=400",
         scrub: true,
       },
-      backgroundColor: '#18181b',
+      backgroundColor: "#18181b",
       scale: 0.95,
       ease: "power1.out",
     });
@@ -33,24 +33,28 @@ export default function Navbar() {
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 top-4 z-50 flex h-16 border-none rounded-xl"
+      className="hidden fixed inset-x-0 top-4 z-50 lg:flex h-16 border-none rounded-xl"
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2 flex justify-center">
         <nav
-        ref={navRef}
-        className="flex items-center justify-between gap-32 p-4 w-full mx-32 rounded-lg">
+          ref={navRef}
+          className="flex items-center justify-between gap-32 p-4 w-full mx-32 rounded-lg"
+        >
           <div className="flex items-center gap-8">
             <img
               src="/img/artwork-1.jpg"
               alt="logo"
               className="w-10 h-10 rounded-full"
             />
-            <Button id="product-btn" className="bg-white text-foreground hover:bg-amber-300 transition-colors duration-200 cursor-pointer">
+            <Button
+              id="product-btn"
+              className="bg-white text-foreground hover:bg-amber-300 transition-colors duration-200 cursor-pointer"
+            >
               Join Now
             </Button>
           </div>
 
-          <div className="flex h-full items-center gap-8 ">
+          <div className="hidden lg:flex h-full items-center gap-8">
             {navbarItems.map((item, index) => (
               <a
                 key={index}
