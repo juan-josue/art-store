@@ -14,9 +14,10 @@ const navbarItems = ["Home", "About", "Market" , "Contact"];
 
 export default function Navbar() {
   const navContainerRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    gsap.to(navContainerRef.current, {
+    gsap.to(navRef.current, {
       scrollTrigger: {
         trigger: navContainerRef.current,
         start: "top top",
@@ -34,8 +35,10 @@ export default function Navbar() {
       ref={navContainerRef}
       className="fixed inset-x-0 top-4 z-50 flex h-16 border-none rounded-xl"
     >
-      <header className="absolute top-1/2 w-full -translate-y-1/2">
-        <nav className="flex items-center justify-between p-2 mx-5">
+      <header className="absolute top-1/2 w-full -translate-y-1/2 flex justify-center">
+        <nav
+        ref={navRef}
+        className="flex items-center justify-between gap-32 p-4 w-full mx-32 rounded-lg">
           <div className="flex items-center gap-8">
             <img
               src="/img/artwork-1.jpg"
@@ -47,7 +50,7 @@ export default function Navbar() {
             </Button>
           </div>
 
-          <div className="flex h-full items-center gap-16 ">
+          <div className="flex h-full items-center gap-8 ">
             {navbarItems.map((item, index) => (
               <a
                 key={index}
