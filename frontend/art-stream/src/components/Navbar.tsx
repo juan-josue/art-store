@@ -48,7 +48,7 @@ export default function Navbar() {
             />
             <Button
               id="product-btn"
-              className="bg-white text-foreground hover:bg-amber-300 transition-colors duration-200 cursor-pointer"
+              className="bg-white text-foreground hover:bg-amber-200 transition-colors duration-200 cursor-pointer"
             >
               Join Now
             </Button>
@@ -59,7 +59,7 @@ export default function Navbar() {
               <a
                 key={index}
                 href={`#${item.toLowerCase()}`}
-                className="text-white font-body font-bold uppercase hover:text-amber-300 transition-colors duration-200 cursor-pointer"
+                className="text-white font-body font-bold uppercase hover:text-amber-200 transition-colors duration-200 cursor-pointer"
               >
                 {item}
               </a>
