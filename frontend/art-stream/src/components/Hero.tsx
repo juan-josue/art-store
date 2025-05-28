@@ -1,6 +1,7 @@
 "use client";
 
 import gsap from "gsap";
+import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 
@@ -11,13 +12,12 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Hero() {
   useGSAP(() => {
     gsap.set("#video-frame", {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
       borderRadius: "0 0 0 0",
     });
 
     gsap.to("#video-frame", {
-      clipPath: "polygon(14% 40%, 80% 0%, 90% 70%, 40% 90%)",
-      borderRadius: "40%",
+      clipPath: "polygon(38% 11%, 99% 30%, 61% 95%, 6% 75%)",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: "#video-frame",
@@ -59,7 +59,7 @@ export default function Hero() {
             Upload, sell, and collect with secure instant delivery.
           </p>
           <Button className="bg-amber-200 hover:bg-pink-300 mt-4 rounded-4xl p-4 text-foreground w-40 cursor-pointer">
-            Browse Art
+            <Link href="/login">Browse Art</Link>
           </Button>
         </div>
 
