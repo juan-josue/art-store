@@ -11,13 +11,14 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Contact() {
   const headingContainerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const linkSectionRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     gsap.from(headingContainerRef.current, {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top center",
-        end: "+=400",
+        end: "+=500",
         scrub: true,
       },
       translateY: 200,
@@ -30,28 +31,88 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative min-h-screen w-screen overflow-x-hidden bg-amber-200 px-16"
+      className="relative min-h-screen w-screen overflow-x-hidden bg-amber-200 px-4 lg:px-32 pt-16 lg:pt-64"
     >
+      {/* link section */}
+      <div ref={linkSectionRef} className="flex flex-col lg:flex-row w-full gap-32">
+        {/* left side text */}
+        <div className="flex flex-col gap-8 w-full lg:w-1/2">
+          <h2 className="font-title text-3xl lg:text-6xl text-zinc-900">
+            Sell your art on
+          </h2>
+          <h3 className="font-title font-extrabold text-6xl text-zinc-900">
+            Art Stream.
+          </h3>
+        </div>
+
+        {/* links */}
+        <div className="flex gap-16 lg:gap-32 w-full lg:w-1/2">
+          <div className="flex flex-col gap-4">
+            <h2 className="font-title font-bold text-xl text-zinc-900">
+              Sitemap
+            </h2>
+            <ul>
+              <li>
+                <a className="font-body text-md text-zinc-900 cursor-pointer">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a className="font-body text-md text-zinc-900 cursor-pointer">
+                  About
+                </a>
+              </li>
+              <li>
+                <a className="font-body text-md text-zinc-900 cursor-pointer">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a className="font-body text-md text-zinc-900 cursor-pointer">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a className="font-body text-md text-zinc-900 cursor-pointer">
+                  404
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-4">
+            <h2 className="font-title font-bold text-xl text-zinc-900">
+              Contact
+            </h2>
+            <ul>
+              <li>
+                <a className="font-body text-md text-zinc-900 cursor-pointer">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a className="font-body text-md text-zinc-900 cursor-pointer">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a className="font-body text-md text-zinc-900 cursor-pointer">
+                  Portfolio
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* heading */}
       <div
         ref={headingContainerRef}
-        className="flex flex-col items-center justify-center h-full"
+        className="flex mt-64 items-center justify-center w-full"
       >
-        <h1 className="text-[180px] text-nowrap font-shrikhand text-center pt-32 text-pink-300">
+        <h1 className="text-[3rem] lg:text-[14em] text-nowrap font-shrikhand text-center text-zinc-900 leading-0">
           ART STREAM
         </h1>
       </div>
-      <div className="w-full flex justify-start gap-8">
-        <div className="flex flex-col gap-4 text-zinc-900">
-          <h2 className="font-title font-bold">Socials</h2>
-          <a className="font-body hover:cursor-pointer">GitHub</a>
-          <a className="font-body hover:cursor-pointer">LinkedIn</a>
-          <a className="font-body hover:cursor-pointer">Portfolio</a>
-        </div>
-      </div>
-      <p className="mt-8 text-zinc-800 text-lg font-body text-center mx-auto">
-        This website is a work in progress. If you're a recruiter, artist, or
-        just curious, feel free to connect.
-      </p>
     </section>
   );
 }
