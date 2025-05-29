@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from supabase import create_client
 
@@ -9,6 +10,7 @@ from app.routes.artworks import artworks_bp
 from app.routes.orders import orders_bp
 
 app = Flask(__name__)
+CORS(app, origins=["http://localhost:3000"], supports_credentials=True)
 
 # Setup the Flask-JWT-Extended extension
 app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY")

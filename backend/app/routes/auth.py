@@ -85,7 +85,9 @@ def login():
     
     # Create JWT token
     access_token = create_access_token(identity=str(user['id']))
-    return jsonify(access_token=access_token), 200
+    response = jsonify({"message": "Login successful"})
+    response.set_cookie('access_token', access_token)
+    return response, 200
 
 @auth_bp.route("/me", methods=['GET'])
 @jwt_required()
