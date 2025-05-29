@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 
 import { Button } from "./ui/button";
 
@@ -50,7 +51,7 @@ export default function Navbar() {
               id="product-btn"
               className="bg-white text-foreground hover:bg-amber-200 transition-colors duration-200 cursor-pointer"
             >
-              Join Now
+              <Link href="/login">Start Selling</Link>
             </Button>
           </div>
 
