@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Link from "next/link";
 
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

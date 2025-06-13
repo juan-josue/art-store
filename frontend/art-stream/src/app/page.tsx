@@ -1,10 +1,10 @@
 "use client";
 
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Navbar from "@/components/Navbar";
-import Market from "@/components/Market";
-import Contact from "@/components/Contact";
+import Hero from "@/components/landing/Hero";
+import About from "@/components/landing/About";
+import Navbar from "@/components/landing/Navbar";
+import Market from "@/components/landing/Market";
+import Contact from "@/components/landing/Contact";
 
 export default function Home() {
 

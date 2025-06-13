@@ -7,12 +7,13 @@ import {
 import { Input } from "@/components/ui/input";
 import { Toggle } from "@/components/ui/toggle";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Separator } from "@/components/ui/separator";
 
 import { Star } from "lucide-react";
 
 export default function Filter() {
   return (
-    <div className="absolute top-0 left-0 w-sm  border-neutral-700 border-2 rounded-lg">
+    <div className="absolute top-0 left-0 w-sm  border-neutral-800 border-1 rounded-lg">
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1" className="p-2">
           <AccordionTrigger>
@@ -38,7 +39,7 @@ export default function Filter() {
             </div>
           </AccordionContent>
         </AccordionItem>
-        <hr className="border-neutral-700 border-1 w-full" />
+        <Separator />
 
         <AccordionItem value="item-2" className="p-2">
           <AccordionTrigger>
@@ -52,7 +53,7 @@ export default function Filter() {
             </div>
           </AccordionContent>
         </AccordionItem>
-        <hr className="border-neutral-700 border-1 w-full" />
+        <Separator />
 
         <AccordionItem value="item-3" className="p-2">
           <AccordionTrigger>
@@ -107,7 +108,6 @@ export default function Filter() {
             </RadioGroup>
           </AccordionContent>
         </AccordionItem>
-        <hr className="border-neutral-700 border-1 w-full" />
       </Accordion>
     </div>
   );
