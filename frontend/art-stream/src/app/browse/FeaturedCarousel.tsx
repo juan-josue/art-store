@@ -27,9 +27,9 @@ export default function FeaturedCarousel() {
     >
       <CarouselContent>
         {Array.from({ length: 10 }).map((_, index) => (
-          <CarouselItem key={index} className="basis-1/5 pl-8">
+          <CarouselItem key={index} className="basis-1/3 pl-8">
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-4">
+                <CardContent className="flex aspect-2/1 items-center justify-center p-4">
                   <span className="text-4xl font-semibold">{index + 1}</span>
                 </CardContent>
               </Card>
