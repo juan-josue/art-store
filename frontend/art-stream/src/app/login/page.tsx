@@ -1,5 +1,5 @@
-import { LoginForm } from "@/app/login/LoginForm"
-import { Globe } from 'lucide-react';
+import { LoginForm } from "@/app/login/LoginForm";
+import { Aperture } from "lucide-react";
 import Link from "next/link";
 
 export default function LoginPage() {
@@ -8,8 +8,8 @@ export default function LoginPage() {
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
           <Link href="/" className="flex items-center gap-2 font-medium">
-            <div className="flex h-6 w-6 items-center justify-center rounded-md bg-primary text-primary-foreground">
-              <Globe />
+            <div className="flex h-6 w-6 items-center justify-center rounded-md">
+              <Aperture />
             </div>
             Art Stream
           </Link>
@@ -28,5 +28,5 @@ export default function LoginPage() {
         />
       </div>
     </div>
-  )
+  );
 }

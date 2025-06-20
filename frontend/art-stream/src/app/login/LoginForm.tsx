@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
+import { redirect } from "next/navigation";
+
 export function LoginForm() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     // prevent default submit behaviour (refresh page)
@@ -28,6 +30,7 @@ export function LoginForm() {
       // Handle successful login
       const data = await response.json();
       console.log(data.message);
+      redirect("/browse");
     } else {
       // Handle unsuccessful login
       const error = await response.json();
