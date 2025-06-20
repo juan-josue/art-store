@@ -17,7 +17,7 @@ export function LoginForm() {
     const password = formData.get("password");
 
     // Send login request to server
-    const response = await fetch("http://127.0.0.1:5000/auth/login", {
+    const response = await fetch("http://localhost:5050/auth/login", {
       method: "POST",
       credentials: "include",
       headers: {

@@ -2,6 +2,7 @@ import re
 import bcrypt
 
 from flask import Blueprint, current_app, request, jsonify
+from flask_cors import cross_origin
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
 
 auth_bp = Blueprint("auth", __name__, url_prefix="/auth")
@@ -86,7 +87,14 @@ def login():
     # Create JWT token
     access_token = create_access_token(identity=str(user['id']))
     response = jsonify({"message": "Login successful"})
-    response.set_cookie('access_token', access_token)
+    response.set_cookie(
+        "access_token",
+        access_token,
+        httponly=True,
+        secure=False,
+        samesite="Lax",
+        path="/"
+    )
     return response, 200
 
 @auth_bp.route("/me", methods=['GET'])
