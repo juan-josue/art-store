@@ -1,4 +1,4 @@
-import { LoginForm } from "@/components/landing/login-form"
+import { LoginForm } from "@/app/login/LoginForm"
 import { Globe } from 'lucide-react';
 import Link from "next/link";
 
